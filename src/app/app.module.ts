@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { AgChartsModule } from 'ag-charts-angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { AgChartsModule } from 'ag-charts-angular';
     BrowserModule,
     AppRoutingModule,
     CanvasJSAngularChartsModule, 
-    AgChartsModule
+    AgChartsModule, FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
