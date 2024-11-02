@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { AgChartsModule } from 'ag-charts-angular';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule, 
+    AgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

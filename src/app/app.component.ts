@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CanvasJS } from '@canvasjs/angular-charts';
+import { AgCharts } from "ag-charts-angular";
+import { AgChartOptions } from "ag-charts-community";
 
 @Component({
   selector: 'app-root',
@@ -8,29 +9,40 @@ import { CanvasJS } from '@canvasjs/angular-charts';
 })
 export class AppComponent {
   title = 'test';
+  options: AgChartOptions
 
+  constructor() {
+    this.options = {
+      data: [
+        { asset: "Stocks", amount: 60000 },
+        { asset: "Bonds", amount: 40000 },
+      ],
+      series: [
+        {
+          type: "donut",
+          calloutLabelKey: "asset",
+          angleKey: "amount",
+          innerRadiusRatio: 0.9,
 
-  constructor(){
-    CanvasJS.addColorSet("greenShades",
-      [
-      "#17a8e9",
-      "#02385d",
-      "#2E8B57",
-      "#3CB371",
-      "#90EE90"                
-      ]);
+          innerLabels: [
+            {
+              text: 'Total Investment',
+              fontWeight: 'bold',
+            },
+            {
+              text: '$100,000',
+              spacing: 4,
+              fontSize: 48,
+              color: 'green',
+            },
+          ],
+          innerCircle: {
+            fill: '#c9fdc9',
+          },
+
+        },
+      ],
+    };
   }
-    
-  chartOptions = {
-    animationEnabled: true,
-    colorSet:"greenShades",
-    data: [{
-      type: "doughnut",
-      yValueFormatString: "#,###.##'%'",
-      dataPoints: [
-        { y: 28, name: "Labour" },
-        { y: 10, name: "Legal" },
-      ]
-    }]
-  }
+
 }
