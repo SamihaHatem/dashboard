@@ -64,7 +64,7 @@
 
 .custom-container {  
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1.1fr 1.1fr 0.8fr 1.1fr 1.1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr; 
     gap: 20px 20px; 
     grid-template-areas: 
@@ -74,18 +74,17 @@
       "item10 item10 item10 item11 item12"; 
   }
 
-  /* .item5 .p-absolute {
-    position: absolute;
-    background: #f2f2f2;
-    z-index: 9;
-    right: -15px;
-    left: -15px;
-    top: 40px;
-    height: 223px;
+  .item5 .p-absolute {
     border-radius: 50%;
-    padding: 5px 6px;
-    width: 223px;
-  } */
+    background: #f2f2f2;
+    position: absolute;
+    z-index: 999;
+    height: 244px;
+    left: -35px;
+    right: -35px;
+    padding: 6px;
+    bottom: 40px;
+  }
   
   .item1 { grid-area: item1; }
   
